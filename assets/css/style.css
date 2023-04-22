@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 body{
     background-color: #AAA;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 14px;
+    color: #FFF;
 }
 
 h1{
@@ -11,4 +13,55 @@ h1{
     font-weight: 700;
     font-size: 3em;
     text-align: center;
+}
+
+main{
+    width: 50%;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+.card{
+    height: 40vh;
+    width: 15vw;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(161,0,0,1) 0%, rgba(180,9,9,1) 50%, rgba(218,58,0,1) 100%);
+    text-align: center;
+    border: solid 3px #d5d52a;
+    border-radius: .5em;
+}
+.top_card{
+    display: flex;
+    justify-content: space-between;
+    padding-top: .5em;
+    margin: 0 .5em 0 .5em;
+}
+.img_card{
+    background-color: #FFF;
+    width: 95%;
+    height: 65%;
+    border-radius: .5em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 8em;
+}
+h3{
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.info_card{
+    margin-top: .5em;
+}
+
+.search__pokemon{
+    margin: 0 auto;
+    text-align: center;
+}
+.search__pokemon input{
+    margin: .5em 0 .5em 0;
+    width: 10vw;
 }
