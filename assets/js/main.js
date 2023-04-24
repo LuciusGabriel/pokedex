@@ -5,6 +5,11 @@ const pokemonID = document.querySelector('.pokemon_id')
 const pokemonWEIGHT = document.querySelector('.pokemon_weight')
 const pokemonIMG = document.querySelector('.pokemon_img')
 
+const pokemonFORM = document.querySelector('.form')
+const pokemonSEARCH = document.querySelector('.search_pokemon')
+
+
+
 const card = document.querySelector('.card')
 
 const buscaPokemon = async (pokemon) =>{
@@ -20,6 +25,7 @@ const renderPokemon = async (pokemon) =>{
     pokemonNAME.textContent = data.name; // Determina o NAME do pokemon
     pokemonTYPE1.textContent = data.types[0].type.name; // Determina o TYPE do pokemon
     if(data.types.length == 2){
+        pokemonTYPE2.style.display = 'block'
         pokemonTYPE2.textContent = data.types[1].type.name;
     }else{
         pokemonTYPE2.style.display = 'none'
@@ -27,18 +33,21 @@ const renderPokemon = async (pokemon) =>{
 
     const typePokemon = data.types[0].type.name;
     const typesPokemon = ['normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy']
-    
     switch(typePokemon){
+        case 'normal':
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
+            card.classList.add('normal')
+            break
         case 'water':
-            card.classList.remove(typesPokemon)
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
             card.classList.add('water')
             break
         case 'fire':
-            card.classList.remove('water', 'grass')
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
             card.classList.add('fire')
             break
         case 'grass':
-            card.classList.remove('water', 'fire')
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
             card.classList.add('grass')
     }
 
@@ -50,4 +59,9 @@ const renderPokemon = async (pokemon) =>{
 
 }
 
-renderPokemon(6)
+
+pokemonFORM.addEventListener('submit', (event)=>{
+    event.preventDefault()
+    renderPokemon(pokemonSEARCH.value)
+})
+
