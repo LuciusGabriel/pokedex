@@ -16,8 +16,7 @@ h1{
 }
 
 main{
-    width: 50%;
-    background-color: #FFF;
+
     margin: 0 auto;
 }
 
@@ -25,11 +24,33 @@ main{
     height: 40vh;
     width: 15vw;
     margin: 0 auto;
-    background: linear-gradient(180deg, rgba(161,0,0,1) 0%, rgba(180,9,9,1) 50%, rgba(218,58,0,1) 100%);
     text-align: center;
-    border: solid 3px #d5d52a;
+    border: solid 2px #000;
     border-radius: .5em;
 }
+
+
+/* Background Pokemon Types */
+.normal{
+    background: linear-gradient(180deg, rgba(124,124,124,1) 0%, rgba(186,186,186,1) 50%, rgba(176,176,176,1) 100%);
+}
+.water{
+    background: linear-gradient(180deg, rgba(0,0,161,1) 0%, rgba(9,9,180,1) 50%, rgba(0,58,218,1) 100%);
+}
+.fire{
+    background: linear-gradient(180deg, rgba(161,0,0,1) 0%, rgba(180,9,9,1) 50%, rgba(218,58,0,1) 100%);
+}
+.electric{
+    background: linear-gradient(180deg, rgba(218,201,0,1) 0%, rgba(255,252,0,1) 50%, rgba(241,255,0,1) 100%);
+}
+.grass, .bug{
+    background: linear-gradient(180deg, rgba(112,190,103,1) 0%, rgba(0,204,13,1) 50%, rgba(0,255,12,1) 100%);
+}
+.fairy{
+    background: linear-gradient(180deg, rgba(190,103,152,1) 0%, rgba(206,53,210,1) 50%, rgba(254,165,245,1) 100%);
+}
+
+
 .top_card{
     display: flex;
     justify-content: space-between;
@@ -38,6 +59,9 @@ main{
 }
 .img_card{
     background-color: #FFF;
+    background-image: url(../img/bg-pokemon.jpg);
+    background-size: cover;
+    background-position: center;
     width: 95%;
     height: 65%;
     border-radius: .5em;
