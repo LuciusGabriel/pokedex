@@ -8,7 +8,7 @@ const pokemonIMG = document.querySelector('.pokemon_img')
 const pokemonFORM = document.querySelector('.form')
 const pokemonSEARCH = document.querySelector('.search_pokemon')
 
-
+const startSEARCH = 1
 
 const card = document.querySelector('.card')
 
@@ -59,9 +59,11 @@ const renderPokemon = async (pokemon) =>{
 
 }
 
+renderPokemon(startSEARCH)
 
 pokemonFORM.addEventListener('submit', (event)=>{
     event.preventDefault()
     renderPokemon(pokemonSEARCH.value)
+    pokemonSEARCH.value = ''
 })
 
