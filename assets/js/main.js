@@ -66,5 +66,3 @@ pokemonFORM.addEventListener('submit', (event)=>{
     renderPokemon(pokemonSEARCH.value)
     pokemonSEARCH.value = ''
 })
-
-// Today this day so Hard!
