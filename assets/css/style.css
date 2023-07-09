@@ -49,6 +49,12 @@ main{
 .fairy{
     background: linear-gradient(180deg, rgba(190,103,152,1) 0%, rgba(206,53,210,1) 50%, rgba(254,165,245,1) 100%);
 }
+.poison{
+    background-color: #A33EA1;
+}
+.electric{
+    background-color: #F7D02C;
+}
 
 
 .top_card{
