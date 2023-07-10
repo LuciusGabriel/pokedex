@@ -60,7 +60,16 @@ const renderPokemon = async (pokemon) =>{
         case 'electric':
             card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
             card.classList.add('electric')
-            break  
+            break
+        case 'psychic':
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
+            card.classList.add('psychic')
+            break
+        case 'ground':
+            card.classList.remove('normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy')
+            card.classList.add('ground')
+            break
+
     }
 
     
