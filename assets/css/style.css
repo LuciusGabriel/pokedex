@@ -89,3 +89,8 @@ h3{
     margin: .5em 0 .5em 0;
     width: 10vw;
 }
+footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
